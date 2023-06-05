@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "638ee7bb-a751-4f2f-95fa-680516ddaab1",
+		"name": "MovieBookingApp_NEW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19474318"
+	},
+	"item": [
+		{
+			"name": "admin_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loginId\": \"1000\",\r\n    \"roles\": [\r\n        \"admin\"\r\n    ],\r\n    \"firstName\": \"admin\",\r\n    \"lastName\": \"admin\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"contactNumber\": \"1111111111\",\r\n    \"password\": \"password1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loginId\": \"2000\",\r\n    \"roles\": [\r\n        \"user\"\r\n    ],\r\n    \"firstName\": \"user\",\r\n    \"lastName\": \"user\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"contactNumber\": \"2222222222\",\r\n    \"password\": \"password2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loginId\": \"1000\",\r\n    \"password\": \"password1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loginId\": \"2000\",\r\n    \"password\": \"password2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_forgot",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMDAwIiwiaWF0IjoxNjgzNjE5NjE2LCJleHAiOjE2ODM3MDYwMTZ9.52bk5sswWk3q0tzbulpjYfYVM7TiNCISrmA_GOP8jolDPkxS4ZkqHGrrse3pbnpL0ArNUmSPIZOeEM7g0TQrNQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loginId\":\"1000\",\r\n    \"password\":\"password11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/1000/forgot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"1000",
+						"forgot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_forgot",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMDAwIiwiaWF0IjoxNjgzNjE5NDk4LCJleHAiOjE2ODM3MDU4OTh9.2qJvjcFc-CbPZRtdXgpSVNWWcg4uadcUbe5rYPV-E2WR1p2vzvPVElzqfi7jXZmftKUh93NToBuCoBcMB4hUtw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loginId\":\"2000\",\r\n    \"password\":\"password22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/2000/forgot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"2000",
+						"forgot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view all movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMDAwIiwiaWF0IjoxNjgzNjIwNDU5LCJleHAiOjE2ODM3MDY4NTl9.e5FQEvgSu951or2PrVdMH20WmWFUO1sZPi1aVHXO1BRXxgvzeMRnnAfvpB7rLdkHQ_PVGmERBCzfLlZU2Ghcng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search for a movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMDAwIiwiaWF0IjoxNjgzNjIwNDU5LCJleHAiOjE2ODM3MDY4NTl9.e5FQEvgSu951or2PrVdMH20WmWFUO1sZPi1aVHXO1BRXxgvzeMRnnAfvpB7rLdkHQ_PVGmERBCzfLlZU2Ghcng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/movies/search/mov",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"movies",
+						"search",
+						"mov"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book a ticket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMDAwIiwiaWF0IjoxNjgzNjIwNDU5LCJleHAiOjE2ODM3MDY4NTl9.e5FQEvgSu951or2PrVdMH20WmWFUO1sZPi1aVHXO1BRXxgvzeMRnnAfvpB7rLdkHQ_PVGmERBCzfLlZU2Ghcng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"movie1\",\r\n    \"theatreName\": \"theatre1\",\r\n    \"noOfTickets\": 2,\r\n    \"loginId\": \"2000\",\r\n    \"seatNumber\": [\r\n        \"A1\",\r\n        \"A2\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/movie1/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"movie1",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Booked Tickets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMDAwIiwiaWF0IjoxNjgzNjE5NjE2LCJleHAiOjE2ODM3MDYwMTZ9.52bk5sswWk3q0tzbulpjYfYVM7TiNCISrmA_GOP8jolDPkxS4ZkqHGrrse3pbnpL0ArNUmSPIZOeEM7g0TQrNQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/getallbookedtickets/movie1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"getallbookedtickets",
+						"movie1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update ticket status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMDAwIiwiaWF0IjoxNjgzNjE5NjE2LCJleHAiOjE2ODM3MDYwMTZ9.52bk5sswWk3q0tzbulpjYfYVM7TiNCISrmA_GOP8jolDPkxS4ZkqHGrrse3pbnpL0ArNUmSPIZOeEM7g0TQrNQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/movie1/update/645a03d355b3c25a5cc0fb7a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"movie1",
+						"update",
+						"645a03d355b3c25a5cc0fb7a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMDAwIiwiaWF0IjoxNjgzNjE5NjE2LCJleHAiOjE2ODM3MDYwMTZ9.52bk5sswWk3q0tzbulpjYfYVM7TiNCISrmA_GOP8jolDPkxS4ZkqHGrrse3pbnpL0ArNUmSPIZOeEM7g0TQrNQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1.0/moviebooking/movie3/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"movie3",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
